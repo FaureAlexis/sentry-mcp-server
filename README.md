@@ -4,13 +4,12 @@ A TypeScript implementation of a Sentry MCP (Modern Context Protocol) tool that 
 
 ## ✨ Features
 
-- 🎯 Retrieve Sentry issues by ID or URL
-- 📊 Extract and format issue metadata (title, status, level, etc.)
-- 🔬 Detailed stacktrace analysis and formatting
+- 🎯 Retrieve and analyze Sentry issues
+- 📊 Get formatted issue details and metadata
+- 🔬 View detailed stacktraces
 - 🛠️ Support for both tool and prompt interfaces
-- 🛡️ Comprehensive error handling and validation
-- ⚙️ Environment-based configuration
-- 🔄 SSE transport for real-time communication
+- 🛡️ Robust error handling
+- 🔄 Real-time communication
 
 ## 📦 Installation
 
@@ -20,11 +19,10 @@ pnpm install
 
 ## 🔧 Configuration
 
-Create a `.env` file in the root directory with the following variables:
+Create a `.env` file in the root directory with your Sentry auth token:
 
 ```env
 SENTRY_AUTH_TOKEN=your_sentry_auth_token
-SENTRY_API_BASE=https://sentry.io/api/0/  # Optional, defaults to this value
 ```
 
 ## 📚 Usage
@@ -35,11 +33,11 @@ SENTRY_API_BASE=https://sentry.io/api/0/  # Optional, defaults to this value
 pnpm start
 ```
 
-The server will start on port 1337 by default with SSE transport.
+The server will start on port 1337 by default.
 
-### Using the Tool 🛠️
+### Using with MCP 🛠️
 
-The server provides two interfaces:
+The server provides two MCP interfaces:
 
 1. Tool Interface: `get_sentry_issue`
    ```json
@@ -55,60 +53,6 @@ The server provides two interfaces:
    }
    ```
 
-Both interfaces accept either a Sentry issue ID or a full Sentry issue URL.
-
-### Response Format 📄
-
-The tool returns structured data including:
-- 🆔 Issue ID and title
-- 📊 Status and level
-- 📁 Filename and function where error occurred
-- ❌ Error type
-- ⏰ First and last seen timestamps
-- 🔢 Event count
-- 📋 Formatted stacktrace
-
-## 💻 Development
-
-### Building
-
-```bash
-pnpm run build
-```
-
-### Watching for Changes
-
-```bash
-pnpm run watch
-```
-
-## ⚠️ Error Handling
-
-The server handles various error cases:
-- 🔒 Authentication errors (401)
-- 🔍 Not found errors (404)
-- ✅ Invalid input validation
-- 🔗 Malformed URLs or IDs
-- 🌐 API connection issues
-- ⚙️ Missing configuration errors
-
-## 📦 Dependencies
-
-- @modelcontextprotocol/sdk: ^0.6.1
-- axios: ^1.8.1
-- dotenv: ^16.4.7
-- mcp-framework: ^0.1.25
-- TypeScript: ^5.3.3
-
-## 📝 Type Definitions
-
-The server includes TypeScript definitions for:
-
-- 📊 Sentry issue data
-- 🔍 Event and stacktrace information
-- ⚙️ Configuration options
-- ❌ Error classes
-
 ## 💡 Integrating with Cursor IDE
 
 The Sentry MCP Server can be integrated with Cursor IDE for enhanced development experience:
@@ -116,9 +60,7 @@ The Sentry MCP Server can be integrated with Cursor IDE for enhanced development
 1. 🚀 Start the MCP server locally using `pnpm start`
 2. 🔧 Configure Cursor to use the local MCP server:
   ![image](https://github.com/user-attachments/assets/3c560ecd-190f-4810-b5e5-4233d9451249)
-
 3. 🎉 Enjoy seamless Sentry issue analysis directly in your IDE!
-
 
 ## 🤝 Contributing
 
