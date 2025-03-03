@@ -1,0 +1,28 @@
+{
+  "name": "sentry-mcp-server",
+  "version": "0.0.1",
+  "description": "sentry-mcp-server MCP server",
+  "type": "module",
+  "bin": {
+    "sentry-mcp-server": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "mcp-build",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.6.1",
+    "axios": "^1.8.1",
+    "dotenv": "^16.4.7",
+    "mcp-framework": "^0.1.25"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "typescript": "^5.3.3"
+  }
+}
