@@ -115,7 +115,8 @@ The Sentry MCP Server can be integrated with Cursor IDE for enhanced development
 
 1. 🚀 Start the MCP server locally using `pnpm start`
 2. 🔧 Configure Cursor to use the local MCP server:
-  
+  ![image](https://github.com/user-attachments/assets/3c560ecd-190f-4810-b5e5-4233d9451249)
+
 3. 🎉 Enjoy seamless Sentry issue analysis directly in your IDE!
 
 
