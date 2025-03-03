@@ -23,6 +23,7 @@ Create a `.env` file in the root directory with your Sentry auth token:
 
 ```env
 SENTRY_AUTH_TOKEN=your_sentry_auth_token
+SENTRY_API_BASE=https://sentry.io/api/0/  # Optional, defaults to this value
 ```
 
 ## 📚 Usage
@@ -30,7 +31,7 @@ SENTRY_AUTH_TOKEN=your_sentry_auth_token
 ### Starting the Server 🚀
 
 ```bash
-pnpm start
+pnpm build && pnpm start
 ```
 
 The server will start on port 1337 by default.
