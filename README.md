@@ -109,6 +109,16 @@ The server includes TypeScript definitions for:
 - ⚙️ Configuration options
 - ❌ Error classes
 
+## 💡 Integrating with Cursor IDE
+
+The Sentry MCP Server can be integrated with Cursor IDE for enhanced development experience:
+
+1. 🚀 Start the MCP server locally using `pnpm start`
+2. 🔧 Configure Cursor to use the local MCP server:
+  
+3. 🎉 Enjoy seamless Sentry issue analysis directly in your IDE!
+
+
 ## 🤝 Contributing
 
 1. 🔀 Fork the repository
